@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#181B20">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:src="@drawable/mitchell_only"
+            android:layout_width="match_parent"
+            android:layout_marginTop="-50dp"
+            android:layout_height="750dp"
+            app:layout_constraintTop_toTopOf="@id/header"
+            app:layout_constraintStart_toStartOf="@id/header"
+            app:layout_constraintEnd_toEndOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="@id/header"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:background="@drawable/shadoweffect_black"
+            app:layout_constraintTop_toTopOf="@id/header"
+            app:layout_constraintStart_toStartOf="@id/header"
+            app:layout_constraintEnd_toEndOf="@id/header" />
+        <ImageView
+            android:background="@drawable/shadoweffect"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="@id/header"
+            app:layout_constraintEnd_toEndOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="@id/header"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Sign in to Letterboxd"
+            android:textSize="33sp"
+            android:textColor="#FEFFFF"
+            android:fontFamily="@font/freight_sans_medium"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintStart_toStartOf="@id/header"
+            app:layout_constraintEnd_toEndOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="@id/header"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#feffff"
+        android:hint="Username"
+        android:textColorHint="#93A3B3"
+        android:fontFamily="@font/eloquia_light"
+        android:textSize="23dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#feffff"
+        android:hint="Password"
+        android:textColorHint="#93A3B3"
+        android:fontFamily="@font/eloquia_light"
+        android:textSize="23dp"/>
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="66dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="-290dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/freight_sans_medium"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="1dp"
+        android:text="JOIN"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:backgroundTint="#445565"
+        android:textColor="#FEFFFF"/>
+
+    <Button
+        android:id="@+id/btnResetPassword"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="-110dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/freight_sans_medium"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="1dp"
+        android:text="RESET PASSWORD"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnJoin"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:backgroundTint="#445565"
+        android:textColor="#FEFFFF"/>
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="66dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/freight_sans_bold"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="1dp"
+        android:text="GO"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnResetPassword"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:backgroundTint="#00C02F"
+        android:textColor="#FEFFFF"/>
+
+    <TextView
+        android:id="@+id/footer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnJoin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="-268dp"
+        android:text="Artwork from"
+        android:textColor="#93A3B3"
+        android:fontFamily="@font/freight_sans_medium"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/footer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnResetPassword"
+        app:layout_constraintStart_toEndOf="@id/footer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="-30dp"
+        android:text="The Mitchells vs. The Machines (2021)"
+        android:textColor="#93A3B3"
+        android:fontFamily="@font/freight_sans_bold"
+        android:textSize="15sp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
