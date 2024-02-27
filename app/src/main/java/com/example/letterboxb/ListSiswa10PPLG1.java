@@ -5,12 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListSiswa10PPLG1 extends AppCompatActivity {
-
+public class ListSiswa10PPLG1 extends AppCompatActivity implements AdapterSiswa10PPLG1.ItemClickListener {
+    AdapterSiswa10PPLG1 adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +69,11 @@ public class ListSiswa10PPLG1 extends AppCompatActivity {
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new AdapterSiswa10PPLG1(getApplicationContext(),items));
+        adapter = new AdapterSiswa10PPLG1(getApplicationContext(), items); // Initialize adapter
+        adapter.setClickListener(this); // Set click listener
+        recyclerView.setAdapter(adapter); // Set adapter to RecyclerView
+    }
+    public void onItemClick(View view, int position) {
+        Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
     }
 }

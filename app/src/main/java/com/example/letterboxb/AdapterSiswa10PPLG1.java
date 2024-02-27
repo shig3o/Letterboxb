@@ -2,17 +2,21 @@ package com.example.letterboxb;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<ViewHolderPepeleg> {
+public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<AdapterSiswa10PPLG1.ViewHolderPepeleg> {
 
     Context context;
     List<ItemPepeleg> items;
+    private ItemClickListener mClickListener;
 
     public AdapterSiswa10PPLG1(Context context, List<ItemPepeleg> items) {
         this.context = context;
@@ -21,12 +25,13 @@ public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<ViewHolderPepeleg>
 
     @NonNull
     @Override
-    public ViewHolderPepeleg onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
-        return new ViewHolderPepeleg(LayoutInflater.from(context).inflate(R.layout.item_view,parent,false));
+    public ViewHolderPepeleg onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_view, parent, false);
+        return new ViewHolderPepeleg(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull  ViewHolderPepeleg holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolderPepeleg holder, int position) {
         holder.nameView.setText(items.get(position).getName());
         holder.absenView.setText(items.get(position).getAbsen());
         holder.imageView.setImageResource(items.get(position).getImage());
@@ -35,5 +40,40 @@ public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<ViewHolderPepeleg>
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    // ViewHolder class
+    public class ViewHolderPepeleg extends RecyclerView.ViewHolder implements View.OnClickListener {
+        TextView nameView;
+        TextView absenView;
+        ImageView imageView;
+
+        ViewHolderPepeleg(View itemView) {
+            super(itemView);
+            nameView = itemView.findViewById(R.id.name);
+            absenView = itemView.findViewById(R.id.absen);
+            imageView = itemView.findViewById(R.id.imageview);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+        }
+    }
+
+    // convenience method for getting data at click position
+    String getItem(int id) {
+        return String.valueOf(items.get(id));
+    }
+
+    // allows clicks events to be caught
+    void setClickListener(ItemClickListener itemClickListener) {
+        this.mClickListener = itemClickListener;
+    }
+
+    // parent activity will implement this method to respond to click events
+    public interface ItemClickListener {
+        void onItemClick(View view, int position);
     }
 }
