@@ -69,7 +69,7 @@ public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<AdapterSiswa10PPLG
 
     // convenience method for getting data at click position
     String getItem(int id) {
-        return String.valueOf(items.get(id));
+        return items.get(id).getName();
     }
 
     // allows clicks events to be caught
