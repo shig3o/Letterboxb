@@ -41,6 +41,6 @@
         android:layout_width="0dp"
         android:layout_height="2dp"
         android:layout_weight="1"
-        android:background="#DAD8D8"/>
+        android:background="#FFFFFF"/>
 
 </LinearLayout>

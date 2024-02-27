@@ -20,10 +20,50 @@ public class ListSiswa10PPLG1 extends AppCompatActivity {
 
         List<ItemPepeleg> items = new ArrayList<ItemPepeleg>();
 
-        items.add(new ItemPepeleg("Panda Yorke","26",R.drawable.panda_yorke));
-        items.add(new ItemPepeleg("Panda Yorke","1",R.drawable.panda_yorke));
+        String[] siswa = {
+                "Abdun Nafi Hibatullah",
+                "Aldiansyah Fayruz",
+                "Alikha Mutiara Hati",
+                "Allam Permata Putra",
+                "Arbani Akhyar Radjadin",
+                "Arsya Fauz Marzuki",
+                "Azzam Fitrawansyah Salim",
+                "Azzan Isham Alawiy",
+                "Burhanuddin Zain",
+                "Daffa Raziq Angie Irawan",
+                "Dylan Athallah Alam",
+                "Dzaky Ihsan Rasyid",
+                "Hilal Syah Amali",
+                "Jeremy Edward Domenico Sanjaya",
+                "Jovanco Nicholas Rise",
+                "Khalisha Kaylanasywa",
+                "Maulana Arka Narendra",
+                "Muhammad Asraf El Farras",
+                "Muhammad Choirul'Anam",
+                "Muhammad Evan Maxsalmina",
+                "Muhammad Fakhry Alifahrizq A.",
+                "Muhammad Rafif Azka Budiawan",
+                "Muhammad Zuhrizal",
+                "Nafisah Isbarsani",
+                "Nail Zhavier Adhyaksa",
+                "Nasharuddin Hatta",
+                "Naufal Afdhal Haryda",
+                "Nicholas Christian Chandra",
+                "Ocean Karuna Muryanto",
+                "Pajri Al Fikri Riandi",
+                "Radithia Arlistian Saputra",
+                "Rifqi Wibisono Himmawan",
+                "Royyan Ahmad Zaydan",
+                "Ruga Zinedine Airinka",
+                "Satria Rudi Pratama",
+                "Shofiyyul Hilmi",
+                "Zaskia Amelia Putri"
+        };
 
 
+        for (int i = 0; i < siswa.length; i++){
+            items.add(new ItemPepeleg(siswa[i],Integer.toString(i + 1),R.drawable.panda_yorke));
+        }
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
