@@ -64,7 +64,7 @@ public class ListSiswa10PPLG1 extends AppCompatActivity implements AdapterSiswa1
 
 
         for (int i = 0; i < siswa.length; i++){
-            items.add(new ItemPepeleg(siswa[i],Integer.toString(i + 1),R.drawable.panda_yorke));
+            items.add(new ItemPepeleg(siswa[i],Integer.toString(i + 1),"https://media.tenor.com/akFQ4BiD1UEAAAAe/radiohead-thom-yorke.png"));
         }
 
 

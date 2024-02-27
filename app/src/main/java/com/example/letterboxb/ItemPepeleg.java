@@ -1,11 +1,9 @@
 package com.example.letterboxb;
 public class ItemPepeleg {
 
-    String name;
-    String absen;
-    int image;
+    String name, absen, image;
 
-    public ItemPepeleg(String name, String absen, int image) {
+    public ItemPepeleg(String name, String absen, String image) {
         this.name = name;
         this.absen = "Absen: " + absen;
         this.image = image;
@@ -27,11 +25,11 @@ public class ItemPepeleg {
         this.absen = absen;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 }

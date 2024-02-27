@@ -12,6 +12,8 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<AdapterSiswa10PPLG1.ViewHolderPepeleg> {
 
     Context context;
@@ -34,7 +36,10 @@ public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<AdapterSiswa10PPLG
     public void onBindViewHolder(@NonNull ViewHolderPepeleg holder, int position) {
         holder.nameView.setText(items.get(position).getName());
         holder.absenView.setText(items.get(position).getAbsen());
-        holder.imageView.setImageResource(items.get(position).getImage());
+
+        Glide.with(context)
+                .load(items.get(position).getImage())
+                .into(holder.imageView);
     }
 
     @Override
