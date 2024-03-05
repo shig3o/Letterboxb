@@ -74,6 +74,6 @@ public class ListSiswa10PPLG1 extends AppCompatActivity implements AdapterSiswa1
         recyclerView.setAdapter(adapter); // Set adapter to RecyclerView
     }
     public void onItemClick(View view, int position) {
-        Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + (position + 1), Toast.LENGTH_SHORT).show();
     }
 }
