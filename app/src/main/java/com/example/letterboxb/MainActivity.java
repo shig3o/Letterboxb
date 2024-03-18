@@ -8,6 +8,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.example.letterboxb.databinding.ActivityMainBinding;
+import com.example.letterboxb.fragments.HomeFragment;
+import com.example.letterboxb.fragments.ListSiswaFragment;
+import com.example.letterboxb.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
