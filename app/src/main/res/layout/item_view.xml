@@ -5,7 +5,8 @@
     android:layout_marginTop="10dp"
     android:orientation="horizontal"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="15dp">
+    android:padding="15dp"
+    >
 
 
     <androidx.cardview.widget.CardView

@@ -67,7 +67,6 @@ public class ListSiswa10PPLG1 extends AppCompatActivity implements AdapterSiswa1
             items.add(new ItemPepeleg(siswa[i],Integer.toString(i + 1),"https://media.tenor.com/akFQ4BiD1UEAAAAe/radiohead-thom-yorke.png"));
         }
 
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AdapterSiswa10PPLG1(getApplicationContext(), items); // Initialize adapter
         adapter.setClickListener(this); // Set click listener
